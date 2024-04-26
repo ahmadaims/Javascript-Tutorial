@@ -11,7 +11,7 @@
 <body>
 
 	<div class="main">
-		<div class="code-area">
+		<div class="code-box">
 			<div class="code-top-bar">
 				<h1>Javascript Variables</h1>
 				<div class="top-bar-dots">
@@ -20,21 +20,87 @@
 					<span></span>
 				</div>
 			</div>
-			<div class="code">
+			<div class="code-area">
 				<h3>Variables are Containers for Storing Data</h3>
 				<p>
 					JavaScript Variables can be declared in 4 ways:
-					Automatically
-					Using var
-					Using let
-					Using const
+				<ul>
+					<li>Automatically</li>
+					<li>Using <span class="im-var">var</span></li>
+					<li>Using <span class="im-let">let</span></li>
+					<li>Using <span class="im-const">const</span></li>
+				</ul>
+
 				</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta officiis eaque pariatur dolor repellat, est delectus aliquam at sed maiores. Consectetur laudantium error iste minus natus deserunt esse velit excepturi nulla! Modi totam odio libero fuga distinctio iure mollitia blanditiis soluta incidunt provident laborum quod cumque dignissimos possimus, quia consequatur sit, consectetur quis doloremque delectus? Qui velit cumque quas nobis alias pariatur similique officiis. Ut obcaecati earum maxime amet harum libero assumenda saepe laudantium! Assumenda, repellat nobis dignissimos a nostrum, temporibus dolore cumque neque velit maxime possimus? Placeat molestiae mollitia voluptatibus molestias maiores rem exercitationem incidunt quia optio impedit illo eos, fugit facere ipsa eveniet veniam aspernatur ratione. Cupiditate magnam est saepe sit cumque nulla alias illum non omnis voluptatibus libero in mollitia, perferendis iure delectus placeat optio. Voluptates iste illo quod repellat modi dolorum natus amet dolore velit pariatur culpa, ex voluptatibus fugit, voluptatem, obcaecati vero molestias quaerat soluta. Quod ipsam quia dolorem minima sapiente officiis? Fuga odit, impedit laborum eveniet, laboriosam rerum nobis maxime provident est molestiae quos animi fugit, soluta tenetur. Omnis nostrum, maiores totam aut facilis provident, ipsum nesciunt expedita quae repudiandae aspernatur sapiente fugiat? Optio tempora enim temporibus, velit magnam facilis nostrum sunt, laudantium sequi earum est odio explicabo asperiores alias ex libero laboriosam incidunt quis, qui in itaque iste ratione. Dolore sed eveniet necessitatibus quisquam, doloremque tempora provident est, soluta sunt quidem tempore voluptate quae facilis? Facilis omnis nemo libero fuga eum quae cupiditate deleniti ipsum numquam, obcaecati enim quisquam maiores laborum eius odio illo ex sint dolore! Cumque ab libero officia placeat praesentium voluptatibus numquam quam ullam, aliquam iure minima cupiditate molestiae similique, dolor temporibus doloremque rerum labore obcaecati quasi ipsam. Sit accusamus nemo labore nostrum asperiores obcaecati numquam ipsum delectus necessitatibus sint aliquid eum perspiciatis perferendis quasi alias aut possimus porro nihil, ab, cumque earum voluptates quidem natus nisi. Sequi odio ipsa velit suscipit eaque praesentium iusto eius reiciendis, omnis perferendis provident asperiores ab facilis consequatur nemo. Quidem, accusamus. Laboriosam doloremque eveniet possimus qui minima, voluptas harum tempore minus assumenda veritatis laudantium, similique fugiat vel, sed natus fuga itaque excepturi. Mollitia, dignissimos! Fuga magnam eius, soluta alias iusto porro error quidem nisi explicabo minus voluptatum, sunt accusamus? Voluptatibus eius asperiores earum eligendi perferendis adipisci? Corporis saepe debitis similique ducimus. Cumque autem ipsam at blanditiis asperiores sed. Consequatur rerum delectus possimus, excepturi pariatur optio voluptatem earum maiores ipsam voluptate adipisci praesentium fugit commodi sed numquam iste, quas porro reprehenderit quis cum aliquid dolores sapiente? Distinctio, voluptatem sit perspiciatis hic repudiandae eum ex eveniet aliquid animi rerum dolores, provident sunt eligendi odio, nisi doloribus corrupti optio maiores facilis veritatis laborum obcaecati? Rem, inventore tempore unde eligendi cupiditate veritatis quisquam iste et ab omnis voluptates cum eaque, mollitia, consequuntur voluptate modi. Ad, fugiat? Porro, voluptatum voluptate accusantium harum sit natus praesentium in fuga libero voluptates impedit facere incidunt veniam adipisci corporis error, repellat, id atque ducimus nesciunt qui! Nihil vitae accusamus quos officiis tenetur est ad, assumenda perferendis cumque. Earum ipsa impedit eos explicabo nisi!</p>
+				<h3>Note:</h3>
+				<p>
+					The <span class="im-var">var</span> keyword was used in all JavaScript code from 1995 to 2015.<br>
+					The <span class="im-let">let</span> and const keywords were added to JavaScript in 2015.<br>
+					The <span class="im-var">var</span> keyword should only be used in code written for older browsers.<br>
+				</p>
+				<code class="code">
+					<h3>Example using var</h3>
+					var x = 5;<br>
+					var y = 6;<br>
+					var z = x + y;<br>
+					<strong>z = 11</strong>
+				</code>
+				<code class="code">
+					<h3>Example using let</h3>
+					let x = 5;<br>
+					let y = 6;<br>
+					let z = x + y;<br>
+					<strong>z = 11</strong>
+				</code>
+				<code class="code">
+					<h3>Example using const</h3>
+					const x = 5;<br>
+					const y = 6;<br>
+					const z = x + y;<br>
+					<strong>z = 11</strong>
+				</code>
+				<code class="code">
+					<h3>Mixed Example</h3>
+					const price1 = 5;<br>
+					const price2 = 6;<br>
+					let total = price1 + price2;<br>
+					<strong>total = 11</strong>
+					<p>
+						The two variables price1 and price2 are declared with the const keyword.<br>
+						These are constant values and cannot be changed.<br>
+						The variable total is declared with the let keyword.<br>
+						The value total can be changed.<br>
+					</p>
+				</code>
+				<h3>When to Use var, let, or const?</h3>
+				<ol>
+					<li>Always declare variables</li>
+					<li>Always use <span class="im-const">const</span> if the value should not be changed</li>
+					<li>Always use <span class="im-const">const</span> if the type should not be changed (Arrays and Objects)</li>
+					<li>Only use let if you can't use const</li>
+					<li>Only use <span class="im-let">let</span> if you can't use const</li>
+					<li>Only use <span class="im-var">var</span> if you MUST support old browsers.</li>
+				</ol>
+				<h3 class="mt-10px">JavaScript Identifiers</h3>
+				<p>
+					In JavaScript, every variable must have a distinct name, known as an identifier. These identifiers can be
+					concise, like x and y, or more descriptive, such as age, sum, or totalVolume.<br>
+					Here are the fundamental rules for creating variable names:<br>
+				<ul>
+					<li>Identifiers may consist of letters, digits, underscores, and dollar signs.</li>
+					<li>They must begin with a letter.</li>
+					<li>While they can begin with $ and _, we won't use these in this guide for simplicity.</li>
+					<li>JavaScript is case-sensitive, meaning y and Y represent different variables.</li>
+					<li>Reserved words, such as JavaScript keywords, cannot be used as identifiers.</li>
+					<li>By following these guidelines, you'll create clear and understandable variable names in your JavaScript
+						code.</li>
+				</ul>
+				</p>
 			</div>
 		</div>
 	</div>
 
-
+	<script src="script.js"></script>
 </body>
 
 </html>
