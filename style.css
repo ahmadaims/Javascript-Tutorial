@@ -36,6 +36,8 @@
 	border-bottom: 1px solid black;
 	background-color: #2E343B;
 	color: white;
+	position: sticky;
+	top: 0;
 }
 .code-top-bar .top-bar-dots{
 	display: flex;
