@@ -13,18 +13,19 @@
 	min-height: 100vh;
 	background: linear-gradient(320deg, red, blue);
 }
-.code-area{
+.code-box{
 	min-height: 400px;
 	max-height: 500px;
 	background-color: #21272F;
-	max-width: 70%;
+	max-width: 90%;
+	min-width: 70%;
 	border-radius: 10px;
 	overflow-x: hidden;
 	scrollbar-width: thin; /* "auto" or "thin" or "none" */
 	scrollbar-color: #2E343B transparent; /* thumb color and track color */
 }
 /* Handle on hover */
-.code-area::-webkit-scrollbar-thumb:hover {
+.code-box::-webkit-scrollbar-thumb:hover {
 	background: #555;
 }
 .code-top-bar{
@@ -79,9 +80,44 @@
 	background-color: #2E343B;
 	border-radius: 100%;
 }
-.code {
+.code-area{
 	padding: 20px;
 	color: whitesmoke;
 	overflow-x: hidden;
 }
+.code-area ul,ol{
+	margin-left: 20px;
+}
+.code{
+	/* background-color: red; */
+	display: block;
+	padding: 30px 0;
+	border-bottom: 1px solid #2E343B;
+}
 
+
+
+
+
+
+
+
+
+.im-var{
+	background-color: #4fcc193f;
+	padding: 0 10px;
+	color: #50CC19;
+}
+.im-let{
+	background-color: #febb0146;
+	padding: 0 10px;
+	color: #FEB901;
+}
+.im-const{
+	background-color: #add8e646;
+	padding: 0 10px;
+	color: #ADD8E6;
+}
+.mt-10px{
+	margin-top: 10px;
+}
