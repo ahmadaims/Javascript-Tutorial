@@ -137,10 +137,10 @@
 }
 .real-code-box{
 	margin-top: 20px;
-	min-height: 200px;
 	width: 10	0%;
 	background-color: var(--Charcoal-Slate);
 	border-radius: 5px;
+	padding: 20px;
 }
 .real-code-box h4{
 	padding: 10px;
