@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Javascript Variables</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+	<div class="main">
+		<div class="code-box">
+			<div class="code-top-bar">
+				<h1 id="main-heading">Javascript Functions</h1>
+				<div class="top-bar-dots">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<div class="code-area">
+				<!-- <h3>JavaScript Assignment Operators</h3> -->
+				<p>Functions are fundamental building blocks in JavaScript. They allow you to organize reusable blocks of code that perform specific tasks.</p>
+				<p class="mt-15px">Below is the code which answers are in the console.log</p>
+				<p	>Below is the button to show the popup function alert. This is the example of reusable function.</p>
+				<button onclick="showAlert()">Show Alert</button>
+				<div class="real-code-box" id="output-code">
+					<h4>This is the real time working code which is working in console.log</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="functions.js"></script>
+	<script>
+		// Function to display the code
+		function displayCode() {
+			// Get the output div
+			const outputDiv = document.getElementById('output-code');
+
+			// Clear the previous content
+			outputDiv.innerHTML = '';
+
+			// Fetch the content of the script.js file
+			fetch('functions.js')
+				.then(response => response.text())
+				.then(data => {
+					// Split the code into lines
+					const codeLines = data.split('\n');
+
+					// Iterate over each line and display it
+					codeLines.forEach(line => {
+						// Create a <pre> element to preserve whitespace
+						const pre = document.createElement('pre');
+						// Set the text content of the <pre> element to the code line
+						pre.textContent = line;
+						// Append the <pre> element to the output div
+						outputDiv.appendChild(pre);
+					});
+				})
+				.catch(error => console.error('Error fetching JavaScript file:', error));
+		}
+
+		// Call the function to display the code
+		displayCode();
+	</script>
+</body>
+
+</html>
