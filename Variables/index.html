@@ -92,15 +92,15 @@
 					In JavaScript, every variable must have a distinct name, known as an identifier. These identifiers can be
 					concise, like x and y, or more descriptive, such as age, sum, or totalVolume.<br>
 					Here are the fundamental rules for creating variable names:<br>
-					<ul>
-						<li>Identifiers may consist of letters, digits, underscores, and dollar signs.</li>
-						<li>They must begin with a letter.</li>
-						<li>While they can begin with $ and _, we won't use these in this guide for simplicity.</li>
-						<li>JavaScript is case-sensitive, meaning y and Y represent different variables.</li>
-						<li>Reserved words, such as JavaScript keywords, cannot be used as identifiers.</li>
-						<li>By following these guidelines, you'll create clear and understandable variable names in your JavaScript
-							code.</li>
-					</ul>
+				<ul>
+					<li>Identifiers may consist of letters, digits, underscores, and dollar signs.</li>
+					<li>They must begin with a letter.</li>
+					<li>While they can begin with $ and _, we won't use these in this guide for simplicity.</li>
+					<li>JavaScript is case-sensitive, meaning y and Y represent different variables.</li>
+					<li>Reserved words, such as JavaScript keywords, cannot be used as identifiers.</li>
+					<li>By following these guidelines, you'll create clear and understandable variable names in your JavaScript
+						code.</li>
+				</ul>
 				</p>
 				<div class="real-code-box" id="output-code">
 					<h4>This is the real time working code which is working in console.log</h4>
@@ -114,17 +114,17 @@
 		function displayCode() {
 			// Get the output div
 			const outputDiv = document.getElementById('output-code');
-			
+
 			// Clear the previous content
 			outputDiv.innerHTML = '';
-			
+
 			// Fetch the content of the script.js file
 			fetch('script.js')
 				.then(response => response.text())
 				.then(data => {
 					// Split the code into lines
 					const codeLines = data.split('\n');
-					
+
 					// Iterate over each line and display it
 					codeLines.forEach(line => {
 						// Create a <pre> element to preserve whitespace
@@ -137,10 +137,10 @@
 				})
 				.catch(error => console.error('Error fetching JavaScript file:', error));
 		}
-		
+
 		// Call the function to display the code
 		displayCode();
-		</script>
+	</script>
 </body>
 
 </html>
