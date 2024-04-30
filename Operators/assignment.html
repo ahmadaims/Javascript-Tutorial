@@ -31,9 +31,9 @@
 		</div>
 	</div>
 <script src="assignment.js"></script>
-	<script>
-		// Function to display the code
-		function displayCode() {
+<script>
+	// Function to display the code
+	function displayCode() {
 			// Get the output div
 			const outputDiv = document.getElementById('output-code');
 
@@ -42,27 +42,29 @@
 
 			// Fetch the content of the script.js file
 			fetch('assignment.js')
-				.then(response => response.text())
-				.then(data => {
-					// Split the code into lines
-					const codeLines = data.split('\n');
+					.then(response => response.text())
+					.then(data => {
+							// Create a <pre> element to preserve whitespace
+							const pre = document.createElement('pre');
+							// Set the text content of the <pre> element to the code
+							pre.innerHTML = highlightCode(data);
+							// Append the <pre> element to the output div
+							outputDiv.appendChild(pre);
+					})
+					.catch(error => console.error('Error fetching JavaScript file:', error));
+	}
 
-					// Iterate over each line and display it
-					codeLines.forEach(line => {
-						// Create a <pre> element to preserve whitespace
-						const pre = document.createElement('pre');
-						// Set the text content of the <pre> element to the code line
-						pre.textContent = line;
-						// Append the <pre> element to the output div
-						outputDiv.appendChild(pre);
-					});
-				})
-				.catch(error => console.error('Error fetching JavaScript file:', error));
-		}
+	// Call the function to display the code
+	displayCode();
 
-		// Call the function to display the code
-		displayCode();
-	</script>
+	// Function to highlight JavaScript code
+	function highlightCode(code) {
+			// Use regular expression to find JavaScript comments
+			const commentRegex = /(\/\/[^\n]*|\/\*[\s\S]*?\*\/)/g;
+			// Replace comments with styled spans
+			return code.replace(commentRegex, '<span class="comment">$&</span>');
+	}
+</script>
 </body>
 
 </html>
