@@ -55,3 +55,13 @@ const productQuantity = 2;
 const totalCost = calculateTotal(productPrice, productQuantity);
 console.log(`Total cost: $${totalCost}`); // Output: Total cost: $20
 
+
+
+/* Formatting Text: */
+function capitalizeFirstLetter(text) {
+  return text.charAt(0).toUpperCase() + text.slice(1); //.charAt() returns the character at the specified index. .slice() returns a part of a string.
+}
+
+const name = "ahmadaims";
+const formattedName = capitalizeFirstLetter(name);
+console.log(formattedName); // Output: John Doe
