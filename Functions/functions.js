@@ -41,4 +41,17 @@ myFunction();
 
 
 // code below can NOT use carName it will show an error because carName is a local variable inside a function
-console.log(carName);
+// console.log(carName);
+
+
+/* Basic example of functions */
+/* 1.Calculating a Total: */
+function calculateTotal(price, quantity) {
+  return price * quantity;
+}
+// Like a cart page where product price has to multiply the product quantity to get the total cost
+const productPrice = 10;
+const productQuantity = 2;
+const totalCost = calculateTotal(productPrice, productQuantity);
+console.log(`Total cost: $${totalCost}`); // Output: Total cost: $20
+
