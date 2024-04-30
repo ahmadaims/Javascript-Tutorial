@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Javascript Variables</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+	<div class="main">
+		<div class="code-box">
+			<div class="code-top-bar">
+				<h1 id="main-heading">Javascript Objects</h1>
+				<div class="top-bar-dots">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<div class="code-area">
+				<h3>Real Life Objects, Properties, and Methods</h3>
+				<p>
+					In real life, a car is an <span class="im-object">object</span>.<br>
+					A car has properties like weight and color, and methods like start and stop:
+				</p>
+				<img src="../images/js-object-car-example.png" alt="" class="br-10px img-80">
+				<p>
+					All cars have the same properties, but the property values differ from car to car.<br>
+					All cars have the same methods, but the methods are performed at different times.
+				</p>
+				<h3>Objects are variables too. But objects can contain many values.</h3>
+				<p class="mt-20px">Below is the code which answers are in the console.log</p>
+				<div class="real-code-box" id="output-code">
+					<h4>This is the real time working code which is working in console.log</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="objects.js"></script>
+	<script>
+		// Function to display the code
+		function displayCode() {
+			// Get the output div
+			const outputDiv = document.getElementById('output-code');
+
+			// Clear the previous content
+			outputDiv.innerHTML = '';
+
+			// Fetch the content of the script.js file
+			fetch('objects.js')
+				.then(response => response.text())
+				.then(data => {
+					// Create a <pre> element to preserve whitespace
+					const pre = document.createElement('pre');
+					// Set the text content of the <pre> element to the code
+					pre.innerHTML = highlightCode(data);
+					// Append the <pre> element to the output div
+					outputDiv.appendChild(pre);
+				})
+				.catch(error => console.error('Error fetching JavaScript file:', error));
+		}
+
+		// Call the function to display the code
+		displayCode();
+
+		// Function to highlight JavaScript code
+		function highlightCode(code) {
+			// Use regular expression to find JavaScript comments
+			const commentRegex = /(\/\/[^\n]*|\/\*[\s\S]*?\*\/)/g;
+			// Replace comments with styled spans
+			return code.replace(commentRegex, '<span class="comment">$&</span>');
+		}
+	</script>
+</body>
+
+</html>
