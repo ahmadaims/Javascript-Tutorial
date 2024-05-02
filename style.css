@@ -141,25 +141,30 @@
 	padding: 0 10px;
 	color: #19ccc9;
 }
+.im-highlight{
+	background-color: #383535b5;
+	padding: 0 10px;
+	color: #d5cccc;
+}
 .mt-10px{
 	margin-top: 10px;
 }
-.real-code-box{
+.real-code-box,.real-code-box{
 	margin-top: 20px;
 	width: 10	0%;
 	background-color: var(--Charcoal-Slate);
 	border-radius: 5px;
 	padding: 20px;
 }
-.real-code-box h4{
+.real-code-box,.real-code-box h4{
 	padding: 10px;
 	color: var(--White);
 	font-weight: 500;
 	font-size: 15px;
 	border-radius: 5px 5px 0 0;
 }
-.real-code-box pre {
-	white-space: pre-wrap;
+.real-code-box,.real-code-box pre {
+	/* white-space: pre-wrap; */
 }
 
 
@@ -190,4 +195,14 @@
 }
 .comment {
 	color: #9da5ae; /* Change this color to whatever you prefer */
+}
+button{
+	padding: 10px 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	background-color: var(--Fiesta-Red);
+	color: var(--White-Smoke);
+	margin: 10px 0;
+	cursor: pointer;
 }
