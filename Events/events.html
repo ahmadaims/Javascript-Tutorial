@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Events - Tutorial</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <div class="main">
+    <div class="code-box">
+      <div class="code-top-bar">
+        <h1 id="main-heading">Javascript events</h1>
+        <div class="top-bar-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="code-area">
+        <p>
+          Events are a core concept in JavaScript that enable you to respond to user interactions and other occurrences
+          within your web page. Here's a breakdown of events in JavaScript:
+        </p>
+        <h3>What are Events?</h3>
+        <ul>
+          <li>Events are signals that something has happened in a web page. This could be a user clicking a button,
+            moving the mouse over an element, or even something happening in the background, like a timer expiring.</li>
+          <li>By handling events, you can make your web page interactive and dynamic, responding to user actions and
+            external triggers.</li>
+        </ul>
+        <strong>The DOM Event Model:</strong>
+        <ul>
+          <li>The Document Object Model (DOM) represents the structure of your web page.</li>
+          <li>When an event occurs on an element in the DOM (e.g., a button click), a corresponding event object is
+            created and propagated through the DOM tree.</li>
+        </ul>
+        <strong>Attaching Event Listeners:</strong>
+        <ul>
+          <li>To respond to events, you use event listeners. These are functions that are attached to specific elements
+            and triggered when the corresponding event occurs on that element.</li>
+          <li>The most common way to attach event listeners is using the <span
+              class="im-highlight">addEventListener()</span> method:</li>
+        </ul>
+        <h3>Common Event Types:</h3>
+        <ul>
+          <li>Click: User clicks on an element.</li>
+          <li>Mouseover: User moves the mouse over an element.</li>
+          <li>Mouseout: User moves the mouse out of an element.</li>
+          <li>Keydown/Keyup/Keypress: User presses, holds, or releases a key.</li>
+          <li>Submit: User submits a form.</li>
+        </ul>
+        <h3>Examples of Using Events:</h3>
+        <ul>
+          <li>Validating form data: Handle the submit event on a form to validate user input before submitting the data.</li>
+          <li>Creating interactive menus: Use mouseover/mouseout events to show and hide dropdown menus on hover.</li>
+          <li>Implementing keyboard navigation: Respond to keydown events to allow users to navigate your page with the keyboard.</li>
+        </ul>
+        <div class="real-code-box">
+          <p id="changePara">click on the button below to show the date here</p>
+        </div>
+        <button id="myButton">Button content</button>
+        <div class="real-code-box" id="output-code">
+          <h4>This is the real time working code which is working in console.log</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="events.js"></script>
+  <script>
+    // Function to display the code
+    function displayCode() {
+      // Get the output div
+      const outputDiv = document.getElementById('output-code');
+
+      // Clear the previous content
+      outputDiv.innerHTML = '';
+
+      // Fetch the content of the script.js file
+      fetch('events.js')
+        .then(response => response.text())
+        .then(data => {
+          // Create a <pre> element to preserve whitespace
+          const pre = document.createElement('pre');
+          // Set the text content of the <pre> element to the code
+          pre.innerHTML = highlightCode(data);
+          // Append the <pre> element to the output div
+          outputDiv.appendChild(pre);
+        })
+        .catch(error => console.error('Error fetching JavaScript file:', error));
+    }
+
+    // Call the function to display the code
+    displayCode();
+
+    // Function to highlight JavaScript code
+    function highlightCode(code) {
+      // Use regular expression to find JavaScript comments
+      const commentRegex = /(\/\/[^\n]*|\/\*[\s\S]*?\*\/)/g;
+      // Replace comments with styled spans
+      return code.replace(commentRegex, '<span class="comment">$&</span>');
+    }
+  </script>
+</body>
+
+</html>
