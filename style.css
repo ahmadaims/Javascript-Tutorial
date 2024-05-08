@@ -26,8 +26,8 @@
 	background: linear-gradient(320deg, red, blue);
 }
 .code-box{
-	min-height: 400px;
-	max-height: 500px;
+	min-height: 450px;
+	max-height: 550px;
 	background-color: var(--Deep-Navy);
 	max-width: 90%;
 	min-width: 70%;
@@ -146,6 +146,11 @@
 	padding: 0 10px;
 	color: #d5cccc;
 }
+.im-error{
+	background-color: rgba(126, 37, 37, 0.359);
+	padding: 5px;
+	color: rgb(255, 33, 33);
+}
 .mt-10px{
 	margin-top: 10px;
 }
@@ -154,17 +159,22 @@
 	width: 10	0%;
 	background-color: var(--Charcoal-Slate);
 	border-radius: 5px;
-	padding: 20px;
-}
-.real-code-box,.real-code-box h4{
 	padding: 10px;
-	color: var(--White);
-	font-weight: 500;
-	font-size: 15px;
-	border-radius: 5px 5px 0 0;
+	font-size: 16px;
 }
-.real-code-box,.real-code-box pre {
-	/* white-space: pre-wrap; */
+h4{
+	/* padding: 10px; */
+	color: var(--White);
+	font-weight: 600;
+	font-size: 15px;
+	border-radius: 5px;
+}
+pre {
+	white-space: pre-wrap;
+	font-family: monospace;
+	background-color: var(--Medium-Drak);
+	padding: 3px 10px;
+	border-radius: 3px;
 }
 
 
@@ -195,6 +205,12 @@
 }
 .comment {
 	color: #9da5ae; /* Change this color to whatever you prefer */
+}
+.bg-charchol{
+	background-color: var(--Charcoal-Slate);
+}
+.bg-deepnavy{
+	background-color: var(--Deep-Navy);
 }
 button{
 	padding: 10px 20px;
