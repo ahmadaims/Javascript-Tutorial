@@ -33,6 +33,135 @@
           <pre>let carName1 = "Volvo XC60";  // Double quotes</pre>
           <pre>let carName2 = 'Volvo XC60';  // Single quotes</pre>
         </div>
+        <div class="real-code-box">
+          <h3>Quotes Inside Quotes</h3>
+          <p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string</p>
+          <pre>let answer1 = "It's alright";</pre>
+          <pre>let answer2 = "He is called 'Johnny'";</pre>
+          <pre>let answer3 = 'He is called "Johnny"';</pre>
+          <div class="real-code-box bg-deepnavy">
+            <p>Below double quotes inside double quotes will generate error.</p>
+            <pre class="im-error">let answer3 = "He is called "Johnny"";</pre>
+          </div>
+        </div>
+        <div class="real-code-box">
+          <h3>Template Strings</h3>
+          <ul>
+            <li>Templates were introduced with ES6 (JavaScript 2016).</li>
+            <li>Templates are strings enclosed in backticks (`This is a template string`).</li>
+            <li>Templates allow single and double quotes inside a string:</li>
+          </ul>
+          <div class="real-code-box bg-deepnavy">
+            <h3>Example</h3>
+            <pre>let text = `He's often called "Johnny"`;</pre>
+          </div>
+          <div class="real-code-box bg-deepnavy ">
+            <h3>Note</h3>
+            <p>Templates are not supported in Internet Explorer.</p>
+          </div>
+          <div class="real-code-box bg-deepnavy">
+            <h3>String Length</h3>
+            <p>To find the length of a string, use the built-in length property:</p>
+            <pre>let abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";</pre>
+            <pre>let length = abc.length;</pre>
+          </div>
+        </div>
+
+        <div class="real-code-box">
+          <h3>JS Strings Escape Characters</h3>
+          <p>Escape characters in JavaScript strings are special sequences used to represent characters that would
+            otherwise have a special meaning within the string itself, or to insert non-printable characters. Here's a
+            breakdown:</p>
+          <strong>Why Escape Characters?</strong>
+          <ul>
+            <li>Double quotes (") and single quotes (') are commonly used to delimit strings in JavaScript.</li>
+            <li>However, if you want to include a quote within a string itself (e.g., "This is a 'cool' feature"), there
+              would be a conflict.</li>
+            <li>Escape characters help you include these special characters literally within the string.</li>
+          </ul>
+          <div class="real-code-box bg-deepnavy">
+            <h4>1. Including Quotes Within Strings:</h4>
+            <p>The most common use case is to include quotes (single or double) within a string that uses the same type
+              of quote for delimiting. Escape characters allow you to represent the quote literally within the string.
+            </p>
+            <h4>Code:</h4>
+            const quoteinsidequote = "This is a quote \"inside\" the string.";<br>
+            function quoteStrings(){<br>
+            console.log(quoteinsidequote);<br>
+            }<br>
+            <pre>&lt;button&gt; onclick="quoteStrings()">Run code&lt;/button&gt;</pre>
+            <button onclick="quoteStrings()">Run code</button>
+            <script>
+              const quoteinsidequote = "This is a quote \"inside\" the string.";
+              function quoteStrings() {
+                alert(quoteinsidequote);
+              }
+            </script>
+          </div>
+          <div class="real-code-box bg-deepnavy">
+            <h4>2. Formatting Text with Newlines and Tabs:</h4>
+            <p>Use escape characters to create multi-line strings or formatted text with tabs.</p>
+            <h4>Code of newline by using (\n) and column by using (\t):</h4>
+            <pre>let poem = "Roses are red,\nViolets are blue,\nJavaScript is awesome,\nand so are you!";
+console.log(poem);
+poem = "Roses are red,\tViolets are blue,\tJavaScript is awesome,\tand so are you!";
+console.log(poem);</pre>
+            <button onclick="poemLineBreak()">Run Code</button>
+            <script>
+              function poemLineBreak() {
+                let poem = "Roses are red,\nViolets are blue,\nJavaScript is awesome,\nand so are you!";
+                console.log(poem);
+                poem = "Roses are red,\tViolets are blue,\tJavaScript is awesome,\tand so are you!";
+                console.log(poem);
+              }
+            </script>
+            <p>
+              In most cases, it's better to use template literals over single or double quotes for strings in modern
+              JavaScript.Here's why:
+            </p>
+            <h4>Benefits of Template Literals:</h4>
+            <ul>
+              <li>
+                <strong>Readability: </strong>Template literals (backticks) allow you to embed expressions directly
+                within strings, making code easier to read and understand. No more mental gymnastics to figure out
+                single vs. double quotes for escaping.
+              </li>
+              <li>
+                <strong>String Interpolation: </strong>You can seamlessly include variables and expressions within
+                strings using ${expression} syntax. This eliminates the need for string concatenation (+) for dynamic
+                string creation.
+                <div class="real-code-box">
+                  <pre>const name = "Alice";
+const greeting = `Hello, ${name}!`; // Clearer than "Hello, " + name + "!"</pre>
+                  <button onclick="literalsFeature1()">Run</button>
+                  <script>
+                    function literalsFeature1() {
+                      const name = "Alice";
+                      const greeting = `Hello, ${name}!`;
+                      alert(greeting);
+                    }
+                  </script>
+                </div>
+              </li>
+              <li>
+                <strong>Multiline Strings: </strong>You can write multiline strings without the need for concatenation
+                or escape characters for newlines.
+                <div class="real-code-box">
+                  <pre>const message = `This is a multi-line string
+that spans across multiple lines.`;</pre>
+                  <button onclick="literalsFeature2()">Run</button>
+                  <script>
+                    function literalsFeature2() {
+                      alert(`This is a multi-line string
+that spans across multiple lines.`);
+                    }
+                  </script>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="mt-30px">Below is the real working code of JS file.</p>
         <div class="real-code-box" id="output-code">
           <h4>This is the real time working code which is working in console.log</h4>
         </div>
