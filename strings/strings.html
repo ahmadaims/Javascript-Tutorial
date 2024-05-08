@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Strings - Tutorial</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <div class="main">
+    <div class="code-box">
+      <div class="code-top-bar">
+        <h1 id="main-heading">JavaScript Strings</h1>
+        <div class="top-bar-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="code-area">
+        <p>
+          Strings are for storing text<br>
+          Strings are written with quotes
+        </p>
+        <div class="real-code-box">
+          <h3>Using Quotes</h3>
+          <p>A JavaScript string is zero or more characters written inside quotes.</p>
+          <pre>let clientName = "John Doe";</pre>
+          <strong>You can use single or double quotes:</strong>
+          <pre>let carName1 = "Volvo XC60";  // Double quotes</pre>
+          <pre>let carName2 = 'Volvo XC60';  // Single quotes</pre>
+        </div>
+        <div class="real-code-box" id="output-code">
+          <h4>This is the real time working code which is working in console.log</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="strings.js"></script>
+  <script>
+    // Function to display the code
+    function displayCode() {
+      // Get the output div
+      const outputDiv = document.getElementById('output-code');
+
+      // Clear the previous content
+      outputDiv.innerHTML = '';
+
+      // Fetch the content of the script.js file
+      fetch('strings.js')
+        .then(response => response.text())
+        .then(data => {
+          // Create a <pre> element to preserve whitespace
+          const pre = document.createElement('pre');
+          // Set the text content of the <pre> element to the code
+          pre.innerHTML = highlightCode(data);
+          // Append the <pre> element to the output div
+          outputDiv.appendChild(pre);
+        })
+        .catch(error => console.error('Error fetching JavaScript file:', error));
+    }
+
+    // Call the function to display the code
+    displayCode();
+
+    // Function to highlight JavaScript code
+    function highlightCode(code) {
+      // Use regular expression to find JavaScript comments
+      const commentRegex = /(\/\/[^\n]*|\/\*[\s\S]*?\*\/)/g;
+      // Replace comments with styled spans
+      return code.replace(commentRegex, '<span class="comment">$&</span>');
+    }
+  </script>
+</body>
+
+</html>
