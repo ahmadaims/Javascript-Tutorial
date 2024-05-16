@@ -21,11 +21,51 @@
         </div>
       </div>
       <div class="code-area">
+        <h3>Basic String Methods</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusantium tempora aliquid debitis. Facilis obcaecati, commodi perspiciatis necessitatibus repudiandae sapiente!
+          String methods are a powerful set of tools in JavaScript that allow you to manipulate, search, and modify
+          string data. Let's explore some of the most commonly used string methods
         </p>
         <div class="real-code-box">
-          <h3>Basic String Methods</h3>
+          <h4>String Length</h4>
+          <p>The length property returns the length of a string:</p>
+          <div class="real-code-box bg-deepnavy">
+            <span>click on the code to show the answer here</span>
+            <pre id="text_length" class="cp">let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let length = text.length;</pre>
+            <script>
+              let text_length_box = document.getElementById('text_length');
+              text_length_box.addEventListener("click", function () {
+                let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                let length = text.length;
+                this.innerHTML = length;
+                console.log(length);
+              });
+            </script>
+          </div>
+        </div>
+
+        <div class="real-code-box">
+          <h4>Accessing Characters</h4>
+          <div class="real-code-box bg-deepnavy">
+            <p>
+              <span class="im-highlight">charAt(index):</span> Returns the character at a specific index within the
+              string.<BR>
+              <span class="im-highlight">charCodeAt(index):</span> Returns the Unicode character code at a specific
+              index.<br>
+              Click on the below code box to work this code.
+            </p>
+            <pre class="charAt">document.getElementsByClassName('charAt')[0].addEventListener("click",function(){
+const message = "Hello, world!";
+alert(message.charAt(0)+"\n"+message.charCodeAt(7)); // Output : H 119
+})</pre>
+            <script>
+              document.getElementsByClassName('charAt')[0].addEventListener("click", function () {
+                const message = "Hello, world!";
+                alert(message.charAt(0) + "\n" + message.charCodeAt(7)); // Output : H 119
+              })
+            </script>
+          </div>
         </div>
         <p class="mt-30px">Below is the real working code of JS file. Updating in console.log</p>
         <div class="real-code-box" id="output-code">
