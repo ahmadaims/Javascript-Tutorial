@@ -26,6 +26,8 @@
           String methods are a powerful set of tools in JavaScript that allow you to manipulate, search, and modify
           string data. Let's explore some of the most commonly used string methods
         </p>
+
+        <!-- STRING LENGTH -->
         <div class="real-code-box">
           <h4>String Length</h4>
           <p>The length property returns the length of a string:</p>
@@ -45,6 +47,7 @@ let length = text.length;</pre>
           </div>
         </div>
 
+        <!-- STRING ACCESSING CHARACTERS -->
         <div class="real-code-box">
           <h4>Accessing Characters</h4>
           <div class="real-code-box bg-deepnavy">
@@ -67,7 +70,58 @@ alert(message.charAt(0)+"\n"+message.charCodeAt(7)); // Output : H 119
             </script>
           </div>
         </div>
-        <p class="mt-30px">Below is the real working code of JS file. Updating in console.log</p>
+
+        <!-- STRING MODIFICATION -->
+        <div class="real-code-box">
+          <h4>Modification:</h4>
+          <p>Click on defintion in order to code works</p>
+
+          <div class="real-code-box bg-deepnavy">
+            <pre class="toUpperCase"><span class="im-highlight">toUpperCase():</span> Returns a new string converted to uppercase.
+const text = "Hello, World";
+alert(text.toUpperCase());</pre>
+            <script>
+              const text = "Hello, World";
+              document.getElementsByClassName("toUpperCase")[0].addEventListener("click", function () {
+                alert(text.toUpperCase());
+              })
+            </script>
+          </div>
+
+          <div class="real-code-box bg-deepnavy">
+            <pre class="toLowerCase"><span class="im-highlight">toLowerCase():</span> Returns a new string converted to lowercase.
+alert(text.toLowerCase());</pre>
+            <script>
+              document.getElementsByClassName("toLowerCase")[0].addEventListener("click", function () {
+                alert(text.toLowerCase());
+              })
+            </script>
+          </div>
+
+          <div class="real-code-box bg-deepnavy">
+            <pre class="trim"><span class="im-highlight">trim():</span> Removes leading and trailing whitespace characters from the string.
+document.getElementsByClassName("trim")[0].addEventListener("click", function () {
+alert(text.trim());
+})
+            </pre>
+            <script>
+              document.getElementsByClassName("trim")[0].addEventListener("click", function () {
+                alert(text.trim());
+              })
+            </script>
+          </div>
+
+          <div class="real-code-box bg-deepnavy">
+            <pre class="slice"><span class="im-highlight">slice(start, end):</span> Extracts a section of the string and returns a new string.</pre>
+            <script>
+              // let text = "Hello, World!";
+              document.getElementsByClassName("slice")[0].addEventListener("click", function(){
+                alert(text.slice(0, 5)); // Output : Hello
+              })
+            </script>
+          </div>
+        </div>
+        <p class="mt-30px">Below is the real working code of JS file.</p>
         <div class="real-code-box" id="output-code">
           <h4>This is the real time working code which is working in console.log</h4>
         </div>
