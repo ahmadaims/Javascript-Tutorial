@@ -75,7 +75,7 @@ alert(message.charAt(0)+"\n"+message.charCodeAt(7)); // Output : H 119
         <div class="real-code-box">
           <h4>Modification:</h4>
           <p>Click on defintion in order to code works</p>
-
+          <!-- toUpperCase -->
           <div class="real-code-box bg-deepnavy">
             <pre class="toUpperCase"><span class="im-highlight">toUpperCase():</span> Returns a new string converted to uppercase.
 const text = "Hello, World";
@@ -87,7 +87,7 @@ alert(text.toUpperCase());</pre>
               })
             </script>
           </div>
-
+          <!-- toLowerCase -->
           <div class="real-code-box bg-deepnavy">
             <pre class="toLowerCase"><span class="im-highlight">toLowerCase():</span> Returns a new string converted to lowercase.
 alert(text.toLowerCase());</pre>
@@ -97,7 +97,7 @@ alert(text.toLowerCase());</pre>
               })
             </script>
           </div>
-
+          <!-- trim -->
           <div class="real-code-box bg-deepnavy">
             <pre class="trim"><span class="im-highlight">trim():</span> Removes leading and trailing whitespace characters from the string.
 document.getElementsByClassName("trim")[0].addEventListener("click", function () {
@@ -111,16 +111,95 @@ alert(text.trim());
             </script>
           </div>
 
+          <!-- SLICE -->
           <div class="real-code-box bg-deepnavy">
-            <pre class="slice"><span class="im-highlight">slice(start, end):</span> Extracts a section of the string and returns a new string.</pre>
+            <pre class="slice"><span class="im-highlight">slice(start, end):</span> Extracts a section of the string and returns a new string.
+document.getElementsByClassName("slice")[0].addEventListener("click", function(){
+  alert(text.slice(0, 5)); // Output : Hello
+})
+            </pre>
             <script>
               // let text = "Hello, World!";
-              document.getElementsByClassName("slice")[0].addEventListener("click", function(){
+              document.getElementsByClassName("slice")[0].addEventListener("click", function () {
                 alert(text.slice(0, 5)); // Output : Hello
               })
             </script>
           </div>
+          <!-- subString -->
+          <div class="real-code-box bg-deepnavy">
+            <pre class="sub_string"><span class="im-highlight">substring(start, end):</span>(Less common than slice) Similar to slice, extracts a section of the string.
+document.getElementsByClassName("sub_string")[0].addEventListener("click", function(){
+  alert(text.substring(0, 5)); // Output : Hello
+})
+            </pre>
+            <script>
+              // let text = "Hello, World!";
+              document.getElementsByClassName("sub_string")[0].addEventListener("click", function () {
+                alert(text.substring(0, 5)); // Output : Hello
+              })
+            </script>
+          </div>
+          <!-- concat -->
+          <div class="real-code-box bg-deepnavy">
+            <pre class="concat"><span class="im-highlight">concat(string1, string2, ...):</span>Joins multiple strings together and returns a new string.
+            </pre>
+            <script>
+              // let text = "Hello, World!";
+              document.getElementsByClassName("concat")[0].addEventListener("click", function () {
+                alert(text.concat(" This is just a message")); // Output : Hello
+              })
+            </script>
+          </div>
+
         </div>
+
+        <!-- Searching -->
+        <div class="real-code-box bg-charchol">
+          
+          <!-- indexOf -->
+          <div class="real-code-box bg-deepnavy">
+            <h3>indexOf(substring, fromIndex):</h3>
+            <ul>
+              <li>This method searches for the first occurrence of a specified substring within a string.</li>
+              <li>If the substring is found, it returns the index (position) where it starts.</li>
+              <li>If the substring is not found, it returns -1.</li>
+              <li>The fromIndex parameter (optional) specifies where to start the search from within the string (defaults
+                to the beginning).</li>
+            </ul>
+            <b>
+              Code example in the last JS file.
+            </b>
+          </div>
+          <!-- lastIndexOf -->
+          <div class="real-code-box bg-deepnavy">
+            <h3>lastIndexOf(substring, fromIndex):</h3>
+            <ul>
+              <li>This method searches for the last occurrence of a specified substring within a string.</li>
+              <li>If the substring is found, it returns the index (position) where the last occurrence starts.</li>
+              <li>If the substring is not found, it returns -1.</li>
+              <li>The fromIndex parameter (optional) specifies where to start the search from within the string (defaults
+                to the end, searching backward).</li>
+            </ul>
+            <b>
+              Code example in the last JS file.
+            </b>
+          </div>
+          <!-- includes -->
+          <div class="real-code-box bg-deepnavy">
+            <h3> includes(substring, fromIndex):</h3>
+            <ul>
+              <li>This method checks if the specified substring exists anywhere within a string.</li>
+              <li>It returns true if the substring is found, and false otherwise.</li>
+              <li>The fromIndex parameter (optional) specifies where to start the search from within the string (defaults
+                to the beginning).</li>
+            </ul>
+            <b>
+              Code example in the last JS file.
+            </b>
+          </div>
+
+        </div>
+
         <p class="mt-30px">Below is the real working code of JS file.</p>
         <div class="real-code-box" id="output-code">
           <h4>This is the real time working code which is working in console.log</h4>
