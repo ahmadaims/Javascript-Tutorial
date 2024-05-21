@@ -21,11 +21,49 @@
         </div>
       </div>
       <div class="code-area">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusantium tempora aliquid debitis. Facilis obcaecati, commodi perspiciatis necessitatibus repudiandae sapiente!
-        </p>
+        <p>An array is a special variable, which can hold more than one value:</p>
         <div class="real-code-box">
-          <h3>Heading</h3>
+
+          <!-- Creating Arrays -->
+          <div class="real-code-box bg-deepnavy">
+            <h4>1. Creating Arrays:</h4>
+            <ul>
+              <li>Imagine an array like a shopping list that can hold multiple items.</li>
+              <li>Use square brackets [] to create an array.</li>
+              <li>Inside the brackets, list the items separated by commas:</li>
+            </ul>
+            <pre>const colors = ["red", "green", "blue"];
+const numbers = [10, 20, 30];</pre>
+          </div>
+          <!-- Creating Arrays -->
+
+          <!-- Accessing Array Elements -->
+          <div class="real-code-box bg-deepnavy">
+            <h4>2. Accessing Elements:</h4>
+            <ul>
+              <li>Each item has a position called its index (starts from 0).</li>
+              <li>Use the index in square brackets to access specific items:</li>
+            </ul>
+            <p><i>click on specific code in order to work.</i></p>
+            <pre onclick="firstColor()" class="m-5px cp">const colors = ["red", "green", "blue"];
+alert(firstColor);</pre>
+            <script>
+              function firstColor() {
+                const colors = ["red", "green", "blue"];
+                alert(colors);
+              }
+            </script>
+            <pre class="m-5px" onclick="secondNumber()">const secondNumber = [10, 20, 30];
+alert(secondNumber[0]);</pre>
+            <script>
+              function secondNumber() {
+                const secondNumber = [10, 20, 30];
+                alert(secondNumber[0]);
+              }
+            </script>
+          </div>
+          <!-- Accessing Array Elements -->
+
         </div>
         <p class="mt-30px">Below is the real working code of JS file. Updating in console.log</p>
         <div class="real-code-box" id="output-code">
