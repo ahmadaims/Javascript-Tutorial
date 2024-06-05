@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Dates Objects</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <div class="main">
+    <div class="code-box">
+      <div class="code-top-bar">
+        <h1 id="main-heading">Javascript Dates</h1>
+        <div class="top-bar-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="code-area">
+        <p>
+          JavaScript Date Objects let us work with dates:
+        </p>
+        <div class="real-code-box">
+          <h3>Examples</h3>
+          <pre id="date-basic-example">const d = new Date();</pre>
+          <script>
+            document.getElementById("date-basic-example").onclick = function(){
+              const d= new Date();
+              alert(d);
+            }
+          </script>
+        </div>
+        <div class="real-code-box">
+          <h3>Note</h3>
+          <p>
+            Date objects are static. The "clock" is not "running".<br>
+            The computer clock is ticking, date objects are not.
+          </p>
+          <h3>JavaScript Date Output</h3>
+          <p>By default, JavaScript will use the browser's time zone and display a date as a full text string:</p>
+        </div>
+        <p class="mt-30px">Below is the real working code of JS file. Updating in console.log</p>
+        <div class="real-code-box">
+          <h3>Creating Date Objects</h3>
+          <p>
+            Date objects are created with the new Date() constructor.<br>
+            There are 9 ways to create a new date object:
+          </p>
+        </div>
+        <div class="real-code-box" id="output-code">
+          <h4>This is the real time working code which is working in console.log</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="dates.js"></script>
+  <script>
+    // Function to display the code
+    function displayCode() {
+      // Get the output div
+      const outputDiv = document.getElementById('output-code');
+
+      // Clear the previous content
+      outputDiv.innerHTML = '';
+
+      // Fetch the content of the script.js file
+      fetch('dates.js')
+        .then(response => response.text())
+        .then(data => {
+          // Create a <pre> element to preserve whitespace
+          const pre = document.createElement('pre');
+          // Set the text content of the <pre> element to the code
+          pre.innerHTML = highlightCode(data);
+          // Append the <pre> element to the output div
+          outputDiv.appendChild(pre);
+        })
+        .catch(error => console.error('Error fetching JavaScript file:', error));
+    }
+
+    // Call the function to display the code
+    displayCode();
+
+    // Function to highlight JavaScript code
+    function highlightCode(code) {
+      // Use regular expression to find JavaScript comments
+      const commentRegex = /(\/\/[^\n]*|\/\*[\s\S]*?\*\/)/g;
+      // Replace comments with styled spans
+      return code.replace(commentRegex, '<span class="comment">$&</span>');
+    }
+  </script>
+</body>
+
+</html>
