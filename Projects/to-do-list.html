@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-do-list</title>
+</head>
+<body>
+
+  <h1>To-do-list</h1>
+  <p>This is a simple to-do list app that allows you to add, edit, and delete tasks.</p>
+  <p>Click on the "Add Task" button to add a new task.</p>
+  <form action="" id="task-form">
+    <input type="text" name="" id="task-input" required>
+    <button>Add Task</button>
+  </form>
+  <div class="tasks-output">
+
+  </div>
+  <script>
+    document.getElementById("task-form").addEventListener("submit", function(event){
+      event.preventDefault();
+      let task = document.getElementById("task-input").value;
+      let tasksOutput = document.getElementsByClassName("tasks-output")[0];
+      tasks.innerHTML= `<p>${task}</p>`;
+      tasksOutput.innerHTML = tasks;
+      document.getElementById("task-input").value = "";
+      console.log(tasks);
+    })
+  </script>
+</body>
+</html>
