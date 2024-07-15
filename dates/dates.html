@@ -28,8 +28,8 @@
           <h3>Examples</h3>
           <pre id="date-basic-example">const d = new Date();</pre>
           <script>
-            document.getElementById("date-basic-example").onclick = function(){
-              const d= new Date();
+            document.getElementById("date-basic-example").onclick = function () {
+              const d = new Date();
               alert(d);
             }
           </script>
@@ -49,6 +49,19 @@
           <p>
             Date objects are created with the new Date() constructor.<br>
             There are 9 ways to create a new date object:
+          <pre>
+new Date()
+new Date(date string)
+
+new Date(year,month)
+new Date(year,month,day)
+new Date(year,month,day,hours)
+new Date(year,month,day,hours,minutes)
+new Date(year,month,day,hours,minutes,seconds)
+new Date(year,month,day,hours,minutes,seconds,ms)
+
+new Date(milliseconds)
+            </pre>
           </p>
         </div>
         <div class="real-code-box" id="output-code">
