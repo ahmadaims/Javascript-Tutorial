@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To-do-list</title>
 </head>
+
 <body>
 
   <h1>To-do-list</h1>
@@ -15,18 +17,32 @@
     <button>Add Task</button>
   </form>
   <div class="tasks-output">
-
+    <p>
+      okat
+      <button class="edit-button">edit</button>
+      <button class="delete-button">delete</button>
+    </p>
   </div>
   <script>
-    document.getElementById("task-form").addEventListener("submit", function(event){
+    document.getElementById("task-form").addEventListener("submit", function (event) {
       event.preventDefault();
       let task = document.getElementById("task-input").value;
       let tasksOutput = document.getElementsByClassName("tasks-output")[0];
-      tasksOutput.innerHTML += `<p>${task}</p>`;
-      // tasksOutput.innerHTML += task + "<br>";
+      tasksOutput.innerHTML += `<p>${task} <button class="edit-button">edit</button>
+  <button class="delete-button">delete</button></p>`;
       document.getElementById("task-input").value = "";
       console.log(tasksOutput);
-    })
+    });
+
+
+    document.getElementsByClassName("tasks-output")[0].addEventListener("click", function (event) {
+      // Check if the clicked element is a delete button
+      if (event.target && event.target.classList.contains("delete-button")) {
+        // Remove the parent <p> element of the delete button
+        event.target.parentElement.remove();
+      }
+    });
   </script>
 </body>
+
 </html>
