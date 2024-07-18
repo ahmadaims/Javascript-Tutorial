@@ -22,10 +22,10 @@
       event.preventDefault();
       let task = document.getElementById("task-input").value;
       let tasksOutput = document.getElementsByClassName("tasks-output")[0];
-      tasks.innerHTML= `<p>${task}</p>`;
-      tasksOutput.innerHTML = tasks;
+      tasksOutput.innerHTML += `<p>${task}</p>`;
+      // tasksOutput.innerHTML += task + "<br>";
       document.getElementById("task-input").value = "";
-      console.log(tasks);
+      console.log(tasksOutput);
     })
   </script>
 </body>
