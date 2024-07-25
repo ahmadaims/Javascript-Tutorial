@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Loops</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <h1>Javascript Loops</h1>
+  <p>Everything is working in console. Code explanation is in the code comments.</p>
+  <script>
+    // for (initialization; condition; increment/decrement) {
+    //   // code to be executed
+    // }
+    // The initialization the statement is executed before the loop starts and is typically used to initialize a counter variable. The condition is checked at the beginning of each iteration and if it is true, the loop continues. If it is false, the loop exits. The increment/decrement statement is executed at the end of each iteration and is used to update the counter variable. Here's an example of a standard for loop that counts from 1 to 10:
+
+    for (let i=0; i<=10; i++){
+      console.log(i);
+    }
+
+
+    // For-in loop
+    // The for-in loop is used to iterate over the properties of an object. It is similar to the for-of loop, but it iterates over the keys of an object instead of the values. Here's an example of a for-in loop that iterates over the properties of an object: It has the folllowing syntax
+    
+    // for (variable in object) {
+    //   // code to be executed
+    // }
+
+    let person= {
+      name : "ahmad",
+      age : "20",
+      country : "pakistan"
+    }
+    for (let key in person){
+      console.log(key + " : " + person[key]);
+    }
+
+
+    // For-of loop
+    // The for-of loop is used to iterate over the values of an iterable object, such as an array or a string. It has the following syntax:
+    // for (variable of object) {
+    //   // code to be executed
+    // }
+    let person2 = ["1", "2", "3", "4", "5"];
+    for (let value of person2){
+      console.log(value);
+    }
+
+  </script>
+  
+  
+</body>
+</html>
