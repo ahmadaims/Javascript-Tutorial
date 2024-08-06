@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bussiness Name Generator</title>
+</head>
+<body>
+  
+
+  <script>
+    // Generate a bussines name without using an array by combining list of adjectives and shop name and another word
+
+    // ADJECTIVES: crazy, amzing, fire
+    // SHOP NAME: shop, store, mart
+    // ANOTHER WORD: bros, limited, hub
+    let askShopName = prompt("Enter shop name");
+    let randomNumber = Math.random();
+    let first,second,third = "";
+    if(randomNumber < 0.33){
+      first = 'crazy';
+      third = 'bros';
+    }
+    else if(randomNumber < 0.66){
+      first = "amazing";
+      third = "limited";
+    }
+    else if(randomNumber < 1){
+      first = "fire";
+      third = "hub";
+    }
+    second = askShopName;
+    console.log(randomNumber);
+    
+    console.log(first + askShopName + third);
+    
+  </script>
+</body>
+</html>
