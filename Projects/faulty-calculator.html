@@ -47,19 +47,17 @@
 
   <script>
     document.getElementById("calculate").addEventListener("click", function () {
-      let number1 = document.getElementById("number1").value;
-      let number2 = document.getElementById("number2").value;
+      let number1 = Number(document.getElementById("number1").value);
+      let number2 = Number(document.getElementById("number2").value);
       let result = document.getElementById("result");
-      parseInt(number1);
-      parseInt(number2);
       let performOperator = document.getElementById("operator").value;
-      let maxRandomNumber = 20;
+      let maxRandomNumber = 100;
 
       let randomNumber = Math.floor(Math.random() * maxRandomNumber + 1);
       if (randomNumber <= 10) {
         calculateWrong();
       }
-      else if (randomNumber > 10 || randomNumber <= maxRandomNumber) {
+      else if (randomNumber > 10 && randomNumber <= maxRandomNumber) {
         calculateCorrect();
       }
       else {
