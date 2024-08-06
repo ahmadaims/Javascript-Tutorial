@@ -50,6 +50,16 @@
 
       let randomNumber = Math.floor(Math.random() * maxRandomNumber + 1);
       if (randomNumber <= 10) {
+        calculateWrong();
+      }
+      else if (randomNumber > 10 || randomNumber <= maxRandomNumber) {
+        calculateCorrect();
+      }
+      else {
+        alert("Values cannot be empty");
+      }
+      
+      function calculateWrong() {
         if (performOperator === "+") {
           console.log(number1 - number2);
         }
@@ -67,7 +77,8 @@
         }
         console.log("Generated random number is " + randomNumber);
       }
-      else if (randomNumber > 10 || randomNumber <= 20) {
+
+      function calculateCorrect() {
         if (performOperator === "+") {
           console.log(number1 + number2);
         }
@@ -85,10 +96,10 @@
         }
         console.log("Generated random number is " + randomNumber);
       }
-      else {
-        alert("Values cannot be empty");
-      }
+      
     })
+
+
 
   </script>
 </body>
