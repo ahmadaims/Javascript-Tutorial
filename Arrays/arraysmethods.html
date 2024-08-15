@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript arrays methods</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <div class="main">
+    <div class="code-box">
+      <div class="code-top-bar">
+        <h1 id="main-heading">Arrays Mehtods</h1>
+        <div class="top-bar-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="code-area">
+        <p></p>
+        <div class="real-code-box">
+
+          <!-- Array length -->
+          <div class="real-code-box bg-deepnavy">
+            <h4>Array Length:</h4>
+            <p>The <span class="im-let">.length</span> property tells you how many items are in the array:</p>
+            <pre onclick="arrayLength()" class="m-5px cp">const cars = ["bmw","mercedes", "audi"]
+alert(cars.length);</pre>
+            <script>
+              function arrayLength() {
+                const cars = ["bmw", "mercedes", "audi"]
+                alert(cars.length);
+              }
+            </script>
+          </div>
+          <!-- Array length -->
+
+          <!-- ADDING AND REMOVING ELEMENTS -->
+          <div class="real-code-box bg-deepnavy">
+            <h4>Array Push</h4>
+            <pre onclick="arrayPush()" class="cp">const colors= ["red", "green", "blue"];
+colors.push("yellow");
+alert (colors);</pre>
+            <script>
+              function arrayPush() {
+                const colors = ["red", "green", "blue"];
+                colors.push("yellow");
+                alert(colors);
+              }
+            </script>
+          </div>
+          <!-- ADDING AND REMOVING ELEMENTS -->
+
+          <!-- Array to string -->
+          <div class="real-code-box bg-deepnavy">
+            <h4>Array toString</h4>
+            <p>The JavaScript method <span class="im-let">toString()</span> converts an array to a string of (comma
+              separated) array values.</p>
+            <pre class="cp" onclick="arraytoString()">const colors= ["red", "green", "blue"];
+message = `type of array is change to '${typeof(colors.toString())}' & string value is ${colors.toString()}`;
+alert (message);</pre>
+            <script>
+              function arraytoString() {
+                const colors = ["red", "green", "blue"];
+                message = `type of array is change to '${typeof (colors.toString())}' & string value is ${colors.toString()}`;
+                alert(message);
+              }
+            </script>
+          </div>
+          <!-- Array to string -->
+
+          <!-- Array join -->
+          <div class="real-code-box bg-deepnavy">
+            <h4>Array join</h4>
+            <p>
+              The JavaScript method <span class="im-let">join()</span> joins all array elements into a string.<Br>
+              It behaves just like <span class="im-let">toString()</span>, but in addition you can specify the
+              separator:
+            </p>
+            <pre onclick="arrayjoin()" class="cp">const cars=["rolls", "lambo", "bugg"];
+carsjoin = cars.join(" & ");
+alert(carsjoin);</pre>
+            <script>
+              function arrayjoin() {
+                const cars = ["rolls", "lambo", "bugg"];
+                carsjoin = cars.join(" & ");
+                alert(carsjoin);
+              }
+            </script>
+          </div>
+          <!-- Array join -->
+
+
+          <!-- Popping and pushing -->
+          <div class="real-code-box bg-deepnavy">
+            <h3>Popping and Pushing</h3>
+            <p>
+              When you work with arrays, it is easy to remove elements and add new elements.<br>
+              This is what popping and pushing is:<br>
+              Popping items out of an array, or pushing items into an array.
+            </p>
+            <div class="real-code-box">
+              <h4>Array pop()</h4>
+              <p>The <span class="im-object">pop()</span> method removes the last element from the array.</p>
+              <pre class="cp" onclick="arraypop()">const cars=["rolls", "lambo", "bugg"];
+  cars.pop();
+  alert(cars);</pre>
+              <script>
+                function arraypop() {
+                  const cars = ["rolls", "lambo", "bugg"];
+                  cars.pop();
+                  alert(cars);
+                }
+              </script>
+            </div>
+
+            <div class="real-code-box">
+              <h4>Array push()</h4>
+              <p>
+                The <span class="im-object">push()</span> method add the element at the end.<br>
+              </p>
+              <pre class="cp" onclick="arraypush()">const cars=["rolls", "lambo", "bugg"];
+cars.push("bmw");
+alert(cars);</pre>
+              <script>
+                function arraypush() {
+                  const cars = ["rolls", "lambo", "bugg"];
+                  cars.push("bmw");
+                  alert(cars);
+                }
+              </script>
+            </div>
+          </div>
+          <!-- Popping and pushing -->
+
+          <div class="real-code-box bg-deepnavy">
+            <h3>Shifting Elements</h3>
+            <p>Shifting is equivalent to popping, but working on the first element instead of the last.</p>
+            <b>Not providing the code samples because it is no needed. It is opposite to <span
+                class="im-object">pop()</span> & <span class="im-object">push()</span></b>
+            <div class="real-code-box">
+              <h4>Array shift()</h4>
+              <p>
+                The shift() method removes the first array element and "shifts" all other elements to a lower index.
+                The shift() method returns the value that was "shifted out":
+              </p>
+              <pre onclick="arrayshift()" class="cp">const fruits = ['apple', 'banana', 'orange', 'grape'];
+fruits.shift();
+alert(fruits);</pre>
+              <script>
+                function arrayshift() {
+                  const fruits = ['apple', 'banana', 'orange', 'grape'];
+                  fruits.shift();
+                  alert(fruits);
+                }
+              </script>
+            </div>
+            <div class="real-code-box">
+              <h4>Array unshift()</h4>
+              <p>
+                The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
+                The unshift() method returns the new array length:
+              </p>
+              <pre onclick="arrayunshift()" class="cp">const fruits = ['apple', 'banana', 'orange', 'grape'];
+fruits.unshift("mango");
+alert(fruits);</pre>
+              <script>
+                function arrayunshift() {
+                  const fruits = ['apple', 'banana', 'orange', 'grape'];
+                  fruits.unshift("mango");
+                  alert(fruits);
+                }
+              </script>
+            </div>
+            <div class="real-code-box">
+              <h4>Array delete()</h4>
+              <p>
+                Using delete() leaves undefined holes in the array.
+                Use pop() or shift() instead.
+              </p>
+              <pre onclick="arraydelete()" class="cp">const fruits = ['apple', 'banana', 'orange', 'grape'];
+delete fruits[0];
+alert(fruits);</pre>
+              <script>
+                function arraydelete() {
+                  const fruits = ['apple', 'banana', 'orange', 'grape'];
+                  delete fruits[0];
+                  alert(fruits);
+                }
+              </script>
+            </div>
+            <div class="real-code-box">
+              <h4>Array concat()</h4>
+              <p>
+                The concat() method creates a new array by merging (concatenating) existing arrays:
+              </p>
+              <pre onclick="arrayconcat()" class="cp">const boysName= ['Ahmad', 'Ali', 'Umer', 'Ali'];
+const girlsName = ['Aisha', 'Amina', 'Khadija', 'Fatima'];
+alert(boysName.concat(girlsName));</pre>
+              <script>
+                function arrayconcat() {
+                  const boysName = ['Ahmad', 'Ali', 'Umer', 'Ali'];
+                  const girlsName = ['Aisha', 'Amina', 'Khadija', 'Fatima'];
+                  alert(boysName.concat(girlsName));
+                }
+              </script>
+              <p>
+                The concat() method does not change the existing arrays. It always returns a new array.<br>
+                The concat() method can take any number of array arguments.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <p class="mt-30px">Below is the real working code of JS file. Updating in console.log</p>
+        <div class="real-code-box" id="output-code">
+          <h4>This is the real time working code which is working in console.log</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="arraysmethods.js"></script>
+
+  <!-- below script is for fetching the code from the js file -->
+  <script>
+    // Function to display the code
+    function displayCode() {
+      // Get the output div
+      const outputDiv = document.getElementById('output-code');
+
+      // Clear the previous content
+      outputDiv.innerHTML = '';
+
+      // Fetch the content of the script.js file
+      fetch('arraysmethods.js')
+        .then(response => response.text())
+        .then(data => {
+          // Create a <pre> element to preserve whitespace
+          const pre = document.createElement('pre');
+          // Set the text content of the <pre> element to the code
+          pre.innerHTML = highlightCode(data);
+          // Append the <pre> element to the output div
+          outputDiv.appendChild(pre);
+        })
+        .catch(error => console.error('Error fetching JavaScript file:', error));
+    }
+
+    // Call the function to display the code
+    displayCode();
+
+    // Function to highlight JavaScript code
+    function highlightCode(code) {
+      // Use regular expression to find JavaScript comments
+      const commentRegex = /(\/\/[^\n]*|\/\*[\s\S]*?\*\/)/g;
+      // Replace comments with styled spans
+      return code.replace(commentRegex, '<span class="comment">$&</span>');
+    }
+  </script>
+</body>
+
+</html>
