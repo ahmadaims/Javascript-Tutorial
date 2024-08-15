@@ -6,13 +6,15 @@
   <title>Calculate the factorial</title>
 </head>
 <body>
-  
+  <button>Click for factorial popup</button>
   <script>
-    let a = 7;
-    for (i=(a-1); i>0; i--){
-      a = a*i;
-    }
-    console.log(a);
+    document.querySelector("button").addEventListener("click", function(){
+      let a = prompt("Enter the number to calculate it's factorial");
+      for (i=(a-1); i>0; i--){
+        a = a*i;
+      }
+      alert(a);
+    })
     
   </script>
 
