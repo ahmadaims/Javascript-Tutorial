@@ -176,43 +176,67 @@ alert(fruits);</pre>
                 }
               </script>
             </div>
-            <div class="real-code-box">
-              <h4>Array delete()</h4>
-              <p>
-                Using delete() leaves undefined holes in the array.
-                Use pop() or shift() instead.
-              </p>
-              <pre onclick="arraydelete()" class="cp">const fruits = ['apple', 'banana', 'orange', 'grape'];
+          </div>
+          <div class="real-code-box bg-deepnavy">
+            <h4>Array delete()</h4>
+            <p>
+              Using delete() leaves undefined holes in the array.
+              Use pop() or shift() instead.
+            </p>
+            <pre onclick="arraydelete()" class="cp">const fruits = ['apple', 'banana', 'orange', 'grape'];
 delete fruits[0];
 alert(fruits);</pre>
-              <script>
-                function arraydelete() {
-                  const fruits = ['apple', 'banana', 'orange', 'grape'];
-                  delete fruits[0];
-                  alert(fruits);
-                }
-              </script>
-            </div>
-            <div class="real-code-box">
-              <h4>Array concat()</h4>
-              <p>
-                The concat() method creates a new array by merging (concatenating) existing arrays:
-              </p>
-              <pre onclick="arrayconcat()" class="cp">const boysName= ['Ahmad', 'Ali', 'Umer', 'Ali'];
+            <script>
+              function arraydelete() {
+                const fruits = ['apple', 'banana', 'orange', 'grape'];
+                delete fruits[0];
+                alert(fruits);
+              }
+            </script>
+          </div>
+          <div class="real-code-box bg-deepnavy">
+            <h4>Array concat()</h4>
+            <p>
+              The concat() method creates a new array by merging (concatenating) existing arrays:
+            </p>
+            <pre onclick="arrayconcat()" class="cp">const boysName = ['Ahmad', 'Ali', 'Umer', 'Ali'];
 const girlsName = ['Aisha', 'Amina', 'Khadija', 'Fatima'];
-alert(boysName.concat(girlsName));</pre>
-              <script>
-                function arrayconcat() {
-                  const boysName = ['Ahmad', 'Ali', 'Umer', 'Ali'];
-                  const girlsName = ['Aisha', 'Amina', 'Khadija', 'Fatima'];
-                  alert(boysName.concat(girlsName));
-                }
-              </script>
-              <p>
-                The concat() method does not change the existing arrays. It always returns a new array.<br>
-                The concat() method can take any number of array arguments.
-              </p>
-            </div>
+const teachersName = ['Maaz', 'Zarina', 'Amna', 'Hira'];
+alert("All Names: " + boysName.concat(girlsName, teachersName));</pre>
+            <script>
+              function arrayconcat() {
+                const boysName = ['Ahmad', 'Ali', 'Umer', 'Ali'];
+                const girlsName = ['Aisha', 'Amina', 'Khadija', 'Fatima'];
+                const teachersName = ['Maaz', 'Zarina', 'Amna', 'Hira'];
+                alert("All Names: " + boysName.concat(girlsName, teachersName));
+              }
+            </script>
+            <p>
+              The concat() method does not change the existing arrays. It always returns a new array.<br>
+              The concat() method can take any number of array arguments.
+              The concat() method can also take strings as arguments:
+            </p>
+          </div>
+          <div class="real-code-box bg-deepnavy">
+            <h4>Array copyWithin()</h4>
+            <p>The <span class="im-let">copyWithin</span> method in JavaScript copies part of an array to another location within the same array without changing its length. It takes three arguments: `target`, `start`, and `end`.</p>
+            <p class="text-whitesmoke">
+              'target': Index at which to copy the sequence to.<br>
+              'start': Index at which to start copying elements from.
+              'end'(optional): Index at which to end copying elements from.
+            </p>
+            <pre onclick="arraycopyWithin()" class="cp">const fruits = ['apple', 'banana', 'orange', 'grape', 'mango', 'cherry','pineapple'];
+alert(fruits.copyWithin(2,0));</pre>
+            <script>
+              function arraycopyWithin(){
+                const fruits = ['apple', 'banana', 'orange', 'grape', 'mango', 'cherry','pineapple'];
+                alert(fruits.copyWithin(2,0));
+              }
+            </script>
+            <p>The <span class="im-let">copyWithin</span> method overwrites the existing values.</p>
+            <p>The <span class="im-let">copyWithin</span> method does not add items to the array.</p>
+            <p>The <span class="im-let">copyWithin</span> method does not change the length of an array.</p>
+            <p>If there is no end specified, so it copies up to the end of the array.</p>
           </div>
         </div>
 
