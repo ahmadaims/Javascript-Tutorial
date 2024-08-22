@@ -239,6 +239,49 @@ alert(fruits.copyWithin(2,0));</pre>
             <p>If there is no end specified, so it copies up to the end of the array.</p>
           </div>
         </div>
+        <div class="real-code-box">
+          <h4>Array flat()</h4>
+          <p>The <span class="im-const">flat()</span> method in Javascript is used to "flatten" an array, meaning it reduces the nesting of arrays. It returns a new array with all sub-array elements concatenated into it recursively, up to specified depth.</p>
+          <pre class="cp" onclick="arrayflat()">const cars =[
+              "Ford", "Porsche",
+              ["BMW", ['series 1', 'X7']],
+              ["Audi", ['A2', 'A1']],
+              ["Mercedes", ['E 250', 'S 500']]
+            ];
+alert(cars.flat());</pre>
+          <script>
+            function arrayflat(){
+              const cars = 
+              [
+                "Ford", "Porsche",
+                ["BMW", ['series 1', 'X7']],
+                ["Audi", ['A2', 'A1']],
+                ["Mercedes", ['E 250', 'S 500']]
+              ];
+              alert(cars.flat());
+            }
+          </script>
+          <p><span class="im-const">flat()</span>won't work on strings</p>
+          <h4>When to Use <span class="im-const">flat(): </span></h4>
+          <p>
+            When working with multi-dimensional arrays and you need to work with them as a flat structure.<br>
+            When you have an array of arrays and you want to reduce it to a single-level array.
+            <br>
+            <span class="im-const">flat()</span>also removes empty slots in arrays (known as sparse arrays)
+          </p>
+        </div>
+        <div class="real-code-box">
+          <h4>Array flatMap()</h4>
+          <p><span class="im-var">flatMap</span> method in JavaScript is a combination of <span class="im-let">map()</span> and <span class="im-const">flat().</span> It first maps each element of an array using a mapping function and flatten the result into a new array. It flattens the array by one level by default.</p>
+          <pre onclick="arrayflatMap()" class="cp">const numbers = [1, 2, 3, 4];
+alert(numbers.flatMap(num => [num * 2]))</pre>
+          <script>
+            function arrayflatMap(){
+              const numbers = [1, 2, 3, 4];
+              alert(numbers.flatMap(num => [num * 2]))
+            }
+          </script>
+        </div>
 
 
         <p class="mt-30px">Below is the real working code of JS file. Updating in console.log</p>
