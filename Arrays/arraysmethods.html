@@ -282,6 +282,60 @@ alert(numbers.flatMap(num => [num * 2]))</pre>
             }
           </script>
         </div>
+        <div class="real-code-box">
+          <h3>Splicing and Slicing Arrays</h3>
+          <p>The <span class="im-ocean">splice()</span> method adds new items to an array.</p>
+          <p>The <span class="im-lightpurple">slice()</span> method slices out a piece of an array.</p>
+          <div class="real-code-box bg-deepnavy">
+            <h4>Array <span class="im-ocean">splice()</span></h4>
+            <pre class="cp" onclick="arraysplice()">const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+fruits.splice(2, 2, 'Lemon', 'Kiwi');
+alert(fruits);</pre>
+            <script>
+              function arraysplice(){
+                const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+                fruits.splice(2, 2, 'Lemon', 'Kiwi');
+                alert(fruits);
+              }
+            </script>
+            <p>
+              The first parameter (2) defines the position where new elements should be added (spliced in).<br>
+              The first parameter (2) defines the position where new elements should be added (spliced in).<br>
+              The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.<br>
+              The <span class="im-ocean">splice()</span> method returns an array with the deleted items
+            </p>
+            <h4>Array <span class="im-ocean">toSpliced()</span></h4>
+            <p>
+              ES2023 added the Array toSpliced() method as a safe way to splice an array without altering the original array.<br>
+              <i>The difference between the new <span class="im-ocean">toSpliced()</span> method and the old <span class="im-ocean">splice()</span> method is that the new method creates a <b>new array</b>, keeping the original array unchanged, while the old method altered the <b>original array</b>.</i>
+            </p>
+            <pre class="cp" onclick="arraytospliced()">const months = ['JAN', 'FEB', 'MAR', 'MAY'];
+alert(months.toSpliced(0,1));
+alert(months);</pre>
+            <script>
+              function arraytospliced(){
+                const months = ['JAN', 'FEB', 'MAR', 'MAY'];
+                alert(months.toSpliced(0,1));
+                alert(months);
+              }
+            </script>
+          </div>
+          <div class="real-code-box bg-deepnavy">
+            <h4>Array <span class="im-lightpurple">slice()</span></h4>
+            <pre class="cp" onclick="arrayslice()">arrayslive()</pre>
+            <script>
+              function arrayslice(){
+                const fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+                alert(fruits.slice(1, 3));
+                alert(fruits);
+              }
+            </script>
+            <p>The <span class="im-lightpurple">slice()</span> method creates a new array.</p>
+            <p>The <span class="im-lightpurple">slice()</span> method does not remove any elements from the source array.</p>
+            <p>The <span class="im-lightpurple">slice()</span> method can take 2 arguments like <span class="im-lightpurple">slice(1,3)</span></p>
+            <p>The method then selects elements from start argument, and up to (but not including) the end argument.</p>
+          </div>
+        </div>
 
 
         <p class="mt-30px">Below is the real working code of JS file. Updating in console.log</p>

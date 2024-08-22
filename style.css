@@ -148,8 +148,18 @@
 }
 .im-error{
 	background-color: rgba(126, 37, 37, 0.359);
-	padding: 5px;
+	padding: 0 10px;
 	color: rgb(255, 33, 33);
+}
+.im-ocean{
+	background-color: rgba(33, 174, 255, 0.309);
+	padding: 0 10px;
+	color: rgb(33, 174, 255);
+}
+.im-lightpurple{
+	background-color: rgba(62, 114, 248, 0.309);
+	padding: 0 10px;
+	color: rgb(156, 156, 255);
 }
 .mt-10px{
 	margin-top: 10px;
