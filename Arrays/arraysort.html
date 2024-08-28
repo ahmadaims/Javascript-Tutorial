@@ -23,8 +23,35 @@
       <div class="code-area">
         <div class="real-code-box">
           <h3>Sorting an Array</h3>
-          <p></p>
+          <p>The <span class="im-lightpurple">sort()</span> method sorts an array alphabetically.</p>
+          <pre class="cp" onclick="arraysort()">const fruits = ['banana', 'apple', 'orange', 'grapes', 'mango', 'Watermelon', 'cherry'];
+alert(fruits.sort());</pre>
+          <script>
+            function arraysort() {
+              const fruits = ['banana', 'apple', 'orange', 'grapes', 'mango', 'Watermelon', 'cherry'];
+              alert(fruits.sort());
+            }
+          </script>
+          <b>Sorting is case-sensitive, meaning uppercase letters (like "Watermelon") come before lowercase letters in
+            lexicographical order.</b>
         </div>
+
+        <div class="real-code-box">
+          <h3>Reversing an Array</h3>
+          <p>The <span class="im-ocean">reverse()</span> method reverses the element in an array:</p>
+          <pre class="cp" onclick="arrayreverse()">const numbers = [1,2,3,4,5,6,7,8,9];
+alert(numbers.reverse());</pre>
+          <script>
+            function arrayreverse() {
+              const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+              alert(numbers.reverse());
+            }
+          </script>
+          <p><i>By combining sort() and reverse(), you can sort an array in descending order: </i></p>
+        </div>
+
+
+
         <p class="mt-30px">Below is the real working code of JS file. Updating in console.log</p>
         <div class="real-code-box" id="output-code">
           <h4>This is the real time working code which is working in console.log</h4>
