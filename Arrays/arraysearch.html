@@ -26,12 +26,13 @@
           <h3>JavaScript Array Search</h3>
           <div class="real-code-box bg-deepnavy">
             <h4>indexOf()</h4>
-            <p>The <span class="im-let">indexOf()</span> method searches an array for an element value and returns its poition.</p>
+            <p>The <span class="im-let">indexOf()</span> method searches an array for an element value and returns its
+              poition.</p>
             <pre class="cp" onclick="arrayindexOf()">let cars = ["Bmw", "Toyota", "Audi", "Honda"];
 alert(cars.indexOf("Audi") + 1);
 //adding +1 because array starts from the zero.</pre>
             <script>
-              function arrayindexOf(){
+              function arrayindexOf() {
                 let cars = ["Bmw", "Toyota", "Audi", "Honda"];
                 alert(cars.indexOf("Audi") + 1);
               }
@@ -43,23 +44,26 @@ alert(cars.indexOf("Audi") + 1);
             <p>
               <span class="im-let">array.indexOf(item, start)</span><br>
               <b>item</b> Required. The item to search for.<br>
-              <b>start</b>. Where to start the search. Negative value will start at the given position counting from the end, and search to the end.
+              <b>start</b>. Where to start the search. Negative value will start at the given position counting from the
+              end, and search to the end.
             </p>
             <div class="real-code-box">
               <h4>lastIndexOf()</h4>
-              <p><span class="im-var">lastIndexOf()</span>is the same as <span class="im-let">array.indexOf()</span> but returns the position of the last occurence of the specified element</p>
+              <p><span class="im-var">lastIndexOf()</span>is the same as <span class="im-let">array.indexOf()</span> but
+                returns the position of the last occurence of the specified element</p>
             </div>
           </div>
           <div class="real-code-box bg-deepnavy">
             <h4>array includes()</h4>
-            <p>ECMAScript 2016 introduced <span class="im-const">array.includes()</span> to arrays. This allows us to check if an element is present in an array (including Nan, unlike indexOf)</p>
+            <p>ECMAScript 2016 introduced <span class="im-const">array.includes()</span> to arrays. This allows us to
+              check if an element is present in an array (including Nan, unlike indexOf)</p>
             <pre class="cp" onclick="arrayincludes()">const vegetables = ["Potato", "Tomato", "Carrot", "Onion"];
 alert(vegetables.includes("tomato"));</pre>
             <script>
-            function arrayincludes(){
-              const vegetables = ["Potato", "Tomato", "Carrot", "Onion"];
-              alert(vegetables.includes("tomato"));
-            }
+              function arrayincludes() {
+                const vegetables = ["Potato", "Tomato", "Carrot", "Onion"];
+                alert(vegetables.includes("tomato"));
+              }
             </script>
             <b>Syntax: </b>
             <span class="im-const">array.includes(search-item)</span>
@@ -70,11 +74,12 @@ alert(vegetables.includes("tomato"));</pre>
           </div>
           <div class="real-code-box bg-deepnavy">
             <h4>Array find()</h4>
-            <p>The <span class="im-ocean"> method returns the value of the first array element that passes a test function.</span></p>
+            <p>The <span class="im-ocean"> method returns the value of the first array element that passes a test
+                function.</span></p>
             <pre class="cp" onclick="arrayfind()">const numbers = [4, 9, 16, 25, 29];
 alert(numbers.find(number => number > 18));</pre>
             <script>
-              function arrayfind(){
+              function arrayfind() {
                 const numbers = [4, 9, 16, 25, 29];
                 alert(numbers.find(number => number > 18));
               }
@@ -90,12 +95,13 @@ alert(numbers.find(number => number > 18));</pre>
 
           <div class="real-code-box bg-deepnavy">
             <h4>Array findIndex()</h4>
-            <p>The <span class="im-ocean">findIndex</span> method returns the index of the first array element that passes a test function. </p>
+            <p>The <span class="im-ocean">findIndex</span> method returns the index of the first array element that
+              passes a test function. </p>
             <pre class="cp" onclick="arrayfindIndex()">const numbers = [4, 9, 16, 25, 29];
 let first = numbers.findIndex(numbers => numbers > 18);
 alert(first);</pre>
             <script>
-              function arrayfindIndex(){
+              function arrayfindIndex() {
                 const numbers = [4, 9, 16, 25, 29];
                 let first = numbers.findIndex(numbers => numbers > 18);
                 alert(first);
@@ -110,12 +116,13 @@ alert(first);</pre>
           </div>
           <div class="real-code-box bg-deepnavy">
             <h4>Array findLast()</h4>
-            <p>The <span class="im-let">findLast()</span> method returns the value of the last array element that passes a test function.</p>
+            <p>The <span class="im-let">findLast()</span> method returns the value of the last array element that passes
+              a test function.</p>
             <pre class="cp" onclick="arrayfindLast()">const numbers = [4, 9, 16, 25, 29, 19, 36, 15, 18];
 let first = numbers.findLast(numbers => numbers > 18);
 alert(first);</pre>
             <script>
-              function arrayfindLast(){
+              function arrayfindLast() {
                 const numbers = [4, 9, 16, 25, 29, 19, 36, 15, 18];
                 let first = numbers.findLast(numbers => numbers > 18);
                 alert(first);
@@ -125,12 +132,13 @@ alert(first);</pre>
           </div>
           <div class="real-code-box bg-deepnavy">
             <h4>Array findLastIndex()</h4>
-            <p>The <span class="im-let">findLastIndex()</span> method returns the index of the last array element that passes a test function.</p>
+            <p>The <span class="im-let">findLastIndex()</span> method returns the index of the last array element that
+              passes a test function.</p>
             <pre class="cp" onclick="arrayfindLastIndex()">const numbers = [4, 9, 16, 25, 29, 19, 36, 15, 18];
 let first = numbers.findLastIndex(numbers => numbers > 18);
 alert(first);</pre>
             <script>
-              function arrayfindLastIndex(){
+              function arrayfindLastIndex() {
                 const numbers = [4, 9, 16, 25, 29, 19, 36, 15, 18];
                 let first = numbers.findLastIndex(numbers => numbers > 18);
                 alert(first);
