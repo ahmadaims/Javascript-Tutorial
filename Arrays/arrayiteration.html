@@ -25,7 +25,12 @@
         <div class="real-code-box">
           <h3>Array forEach()</h3>
           <p>The forEach() method calls a function (a callback function) once for each array element.</p>
-          <pre class="cp" onclick="arrayforEach()">arrayforEach()</pre>
+          <pre class="cp" onclick="arrayforEach()">
+const numbers = [45, 4, 9, 16, 25];
+numbers.forEach(myFunction);
+function myFunction(value, index, array){
+console.log(`${index} : ${value} ${array}`);
+          }</pre>
           <script>
             function arrayforEach(){
               const numbers = [45, 4, 9, 16, 25];
@@ -40,6 +45,8 @@
           <p>The item index</p>
           <p>The array itself</p>
         </div>
+
+        
 
 
         <p class="mt-30px">Below is the real working code of JS file. Updating in console.log</p>
