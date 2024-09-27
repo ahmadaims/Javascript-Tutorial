@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 20px;
+    }
+    .card {
+      width: 70%;
+      height: 100px;
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      overflow: hidden;
+      gap: 20px;
+      .thumbnail-image{
+        position: relative;
+        width: 20%;
+        img{
+          width: 100%;
+          object-fit: cover;
+        }
+        .duration{
+          position: absolute;
+          bottom: 0;
+          right: 5px;
+          padding: 2px 3px;
+          background-color: rgba(0, 0, 0, 0.628);
+          color: white;
+          border-radius: 3px;
+          font-size: 12px;
+        }
+      }
+      .details{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        h2{
+          font-size: 16px;
+          line-height: 16px;
+          margin: 10px 0;
+        }
+        .channel-details{
+          .channel_name{
+            font-size: 14px;
+          }
+          .views{
+            font-size: 14px;
+          }
+          .month{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="card">
+      <div class="thumbnail-image">
+        <img src="https://i.ytimg.com/vi/COjozah5a2E/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAG9iv0o4nH0kwwc8xOxAUFj2Vzjg" alt="Thumbnail Image">
+        <p class="duration">20:00</p>
+      </div>
+      <div class="details">
+        <h2>Card Title</h2>
+        <div class="channel-details">
+          <span class="channel_name">Ahmadaims</span>
+          <span class="views">100 views</span>
+          <span class="month">1 month ago</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
