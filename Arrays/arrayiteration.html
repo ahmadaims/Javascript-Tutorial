@@ -46,7 +46,26 @@ console.log(`${index} : ${value} ${array}`);
           <p>The array itself</p>
         </div>
 
-        
+        <div class="real-code-box">
+          <h3>Array map()</h3>
+          <p>
+            The map() method creates a new array by performing a function on each array element.<br>
+            The map() method does not execute the function for array elements without values.<br>
+            The map() method does not change the original array.
+          </p>
+          <pre class="cp" onclick="arrayMap()">arrayMap()</pre>
+          <p class="bg-deepnavy" id="demo"></p>
+          <script>
+            function arrayMap(){
+              const numbers1 = [45, 4, 9, 16, 25]
+              const numbers2 = numbers1.map(myFunction);
+              document.getElementById("demo").innerHTML = numbers2;
+              function myFunction(value, index, array){
+                return value * 10;
+              }
+            }
+          </script>
+        </div>
 
 
         <p class="mt-30px">Below is the real working code of JS file. Updating in console.log</p>
