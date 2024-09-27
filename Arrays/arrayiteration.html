@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript arrays iteration</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <div class="main">
+    <div class="code-box">
+      <div class="code-top-bar">
+        <h1 id="main-heading">Arrays Iterration</h1>
+        <div class="top-bar-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="code-area">
+        <p>Array iteration methods operate on every array item:</p>
+        <div class="real-code-box">
+          <h3>Array forEach()</h3>
+          <p>The forEach() method calls a function (a callback function) once for each array element.</p>
+          <pre class="cp" onclick="arrayforEach()">arrayforEach()</pre>
+          <script>
+            function arrayforEach(){
+              const numbers = [45, 4, 9, 16, 25];
+              numbers.forEach(myFunction);
+              function myFunction(value, index, array){
+                console.log(`${index} : ${value} ${array}`);
+              }
+            }
+          </script>
+          <strong>Note that the function takes 3 arguments:</strong>
+          <p>The item value</p>
+          <p>The item index</p>
+          <p>The array itself</p>
+        </div>
+
+
+        <p class="mt-30px">Below is the real working code of JS file. Updating in console.log</p>
+        <div class="real-code-box" id="output-code">
+          <h4>This is the real time working code which is working in console.log</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="arrayssearch.js"></script>
+
+  <!-- below script is for fetching the code from the js file -->
+  <script>
+    // Function to display the code
+    function displayCode() {
+      // Get the output div
+      const outputDiv = document.getElementById('output-code');
+
+      // Clear the previous content
+      outputDiv.innerHTML = '';
+
+      // Fetch the content of the script.js file
+      fetch('arrayssearch.js')
+        .then(response => response.text())
+        .then(data => {
+          // Create a <pre> element to preserve whitespace
+          const pre = document.createElement('pre');
+          // Set the text content of the <pre> element to the code
+          pre.innerHTML = highlightCode(data);
+          // Append the <pre> element to the output div
+          outputDiv.appendChild(pre);
+        })
+        .catch(error => console.error('Error fetching JavaScript file:', error));
+    }
+
+    // Call the function to display the code
+    displayCode();
+
+    // Function to highlight JavaScript code
+    function highlightCode(code) {
+      // Use regular expression to find JavaScript comments
+      const commentRegex = /(\/\/[^\n]*|\/\*[\s\S]*?\*\/)/g;
+      // Replace comments with styled spans
+      return code.replace(commentRegex, '<span class="comment">$&</span>');
+    }
+  </script>
+</body>
+
+</html>
